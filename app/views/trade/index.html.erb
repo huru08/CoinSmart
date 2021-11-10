@@ -9,7 +9,7 @@
     <div><br><br>
     <%= btrade.price%>円<br>
     <%= btrade.quantity %>IOST<br>
-    <%=link_to(btrade.day,"/trade/#{btrade.id}") %><br>
+    <%=link_to(btrade.day,"/buy_trade/#{btrade.id}") %><br>
     <%=link_to "編集","/buy_trade/#{btrade.id}/edit" %>
     <%= link_to '削除', "/buy_trade/#{btrade.id}", method: :delete %>
 
@@ -24,7 +24,7 @@
     <div><br><br>
     <%= strade.price%>円<br>
     <%= strade.quantity %>IOST<br>
-    <%=link_to(strade.day,"/trade/#{strade.id}") %><br>
+    <%=link_to(strade.day,"/sell_trade/#{strade.id}") %><br>
     <%=link_to "編集","/sell_trade/#{strade.id}/edit" %>
     <%= link_to '削除', "/sell_trade/#{strade.id}", method: :delete %>
      </div>

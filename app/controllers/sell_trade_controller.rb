@@ -1,10 +1,11 @@
 class SellTradeController < ApplicationController
 
-
     def index
     end
     
     def show
+        @strade = SellTrade.find_by(id:params[:id])
+
     end
     
     

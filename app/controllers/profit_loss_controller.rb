@@ -1,4 +1,5 @@
 class ProfitLossController < ApplicationController
+  
   def index
     @btrade = BuyTrade.all
     @strade = SellTrade.all

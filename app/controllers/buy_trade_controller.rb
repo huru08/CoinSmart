@@ -1,9 +1,13 @@
 class BuyTradeController < ApplicationController
+   
+
 
 def index
 end
 
 def show
+    @btrade = BuyTrade.find_by(id:params[:id])
+
 end
 
 

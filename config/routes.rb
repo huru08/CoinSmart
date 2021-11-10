@@ -1,8 +1,19 @@
 Rails.application.routes.draw do
-  
+  get "/" => "home#top"
+  #devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-get "/" => "home#top"
+
+
+  Rails.application.routes.draw do
+    devise_for :users
+    devise_scope :user do#トップページをログイン画面に
+      root "users/sessions#new"
+    end
+  end
+
+
+
 
 get "profit_loss/index" => "profit_loss#index"
 
