@@ -1,0 +1,26 @@
+ 
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>現在保有数</div>
+<%= @hoyu %>
+<br>
+<br>
+<div>損益総計</div>
+<%= @soneki %>
+<br>
+<br>
+<div>総購入金額</div>
+<%= @btrade.sum(:price) %>
+<br>
+<br>
+<div>総売却金額</div>
+<%= @strade.sum(:price) %>
+<br>
+<br>
+<div>平均購入単価</div>
+<%= @average %>
+
+

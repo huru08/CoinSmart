@@ -1,0 +1,24 @@
+<div class = "new-left">
+
+    <%= form_for @trade ,:url => { :controller => :buy_trade, :action => :create } do |f| %>
+
+    <%= f.label :day, "取引日" %><br>
+    <%= f.date_select :day, class: 'form-control', use_month_numbers: true  %> <br><br>
+
+    <div class= "col-sm-6" ><%= f.label :quantity, "購入数" %><br>
+    <%= f.number_field :quantity, class: "form-control", step: "0.1" %></div><br>
+
+    <div class="col-sm-6"><%= f.label :price, "購入金額" %><br>
+    <%= f.number_field :price, class: "form-control" %></div><br>
+
+    <div class="ta">
+    <%= f.label :memo, "購入時メモ" %><br>
+    <%= f.text_area :memo , :size=>"60x20" %><br><br>
+    </div>
+
+
+   <%= f.submit :"購入登録", class: "btn-primary" %>
+   
+   <% end %>
+
+</div>
