@@ -1,12 +1,6 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <div>購入履歴</div>
 <% @buy_trade.each do |btrade| %>
-    <div><br><br>
+    <div>
     <%= btrade.price%>円<br>
     <%= btrade.quantity %>IOST<br>
     <%=link_to(btrade.day,"/buy_trade/#{btrade.id}") %><br>
@@ -21,12 +15,12 @@
 <br>
 <div>売却履歴</div>
 <% @sell_trade.each do |strade| %>
-    <div><br><br>
+    <div>
     <%= strade.price%>円<br>
     <%= strade.quantity %>IOST<br>
     <%=link_to(strade.day,"/sell_trade/#{strade.id}") %><br>
     <%=link_to "編集","/sell_trade/#{strade.id}/edit" %>
-    <%= link_to '削除', "/sell_trade/#{strade.id}", method: :delete %>
+    <%= link_to'削除', "/sell_trade/#{strade.id}", method: :delete %>
      </div>
     
 <% end %>

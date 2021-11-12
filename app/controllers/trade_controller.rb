@@ -5,4 +5,8 @@ class TradeController < ApplicationController
     @sell_trade = SellTrade.all.order(created_at: :desc)
 
   end
+
+  def show
+  end
+
 end

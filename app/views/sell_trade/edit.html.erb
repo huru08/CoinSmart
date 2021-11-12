@@ -1,8 +1,3 @@
-<br>
-<br>
-<br>
-<br>
-<br>
 <div>登録内容</div>
 <%= @trade.day %>
 <%= @trade.quantity %>
@@ -15,27 +10,25 @@
 <br>
 <br>
 
-<div class = "new-left">
 
     <%= form_for @trade do |f| %>
 
-    <%= f.label :day, "取引日" %><br>
-    <%= f.date_select :day, class: 'form-control', use_month_numbers: true  %> <br><br>
-
-    <div class= "col-sm-6" ><%= f.label :quantity, "購入数" %><br>
-    <%= f.number_field :quantity, class: "form-control", step: "0.1" %></div><br>
-
-    <div class="col-sm-6"><%= f.label :price, "購入金額" %><br>
-    <%= f.number_field :price, class: "form-control" %></div><br>
-
-    <div class="ta">
-    <%= f.label :memo, "購入時メモ" %><br>
-    <%= f.text_area :memo , :size=>"60x20" %><br><br>
-    </div>
-
+        <%= f.label :day, "取引日" %><br>
+        <%= f.date_select :day, class: 'form-control', use_month_numbers: true  %> <br><br>
+    
+        <div class= "" ><%= f.label :quantity, "売却数" %><br>
+        <%= f.number_field :quantity, class: "form-control", step: "0.01",:placeholder => "半角で入力" %></div><br>
+    
+        <div class=""><%= f.label :price, "売却金額" %><br>
+        <%= f.number_field :price, class: "form-control",step: "0.01",:placeholder => "半角で入力" %></div><br>
+    
+        <div class="">
+        <%= f.label :memo, "売却時メモ" %><br>
+        <%= f.text_area :memo, size: "20x10", class: "form-control",:placeholder => "<例> 中国の暗号資産規制が厳しくなったため、一時撤退" %><br><br>
+    
+        </div>
 
    <%= f.submit :"編集登録", class: "btn-primary" %>
    
    <% end %>
 
-</div>
